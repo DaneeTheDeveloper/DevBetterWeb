@@ -16,6 +16,8 @@
 		<WarningsAsErrors />
 	</PropertyGroup>
 
+	<PropertyGroup Condition=" '$(RunConfiguration)' == 'DevBetterWeb.Web - PROD' " />
+	<PropertyGroup Condition=" '$(RunConfiguration)' == 'DevBetterWeb.Web - DEV' " />
 	<ItemGroup>
 		<Content Update="wwwroot\**\*;Views\**\*;Areas\**\Views;appsettings.json;web.config">
 			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
@@ -61,6 +63,8 @@
 		<PackageReference Include="Westwind.AspNetCore.Markdown" Version="3.6.0" />
 		<PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
 
+		<PackageReference Include="Ardalis.EFCore.Extensions" Version="1.1.0" />
+		<PackageReference Include="Ardalis.Specification.EntityFrameworkCore" Version="5.1.0" />
 	</ItemGroup>
 
 	<ItemGroup>
